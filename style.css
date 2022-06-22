@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+#wrap {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    max-width: 420px;
+}
+
+
+#wrap > img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 50%;
+}
+
+#wrap > .ta {
+    display: none;
+}
+
+h1 {
+    margin: 30px 0 0 0 ;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Kirang Haerang', cursive;
+}
+
+#result_area {
+    margin: 20px 0 0 0;
+    text-align: center; 
+    font-size: 40px;   
+    font-weight: 200;
+    font-family: 'Yeon Sung', cursive;
+    
+}
+
+#chances_area {
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Yeon Sung', cursive;
+    font-weight: 300;
+}
+
+#user_input, #play_button, #reset_button {
+    opacity: 0.5;
+    border: 2px solid black; 
+    font-family: 'Kirang Haerang', cursive;
+    font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+    #wrap {
+        position: relative;
+        max-width: 1259px;
+    }
+
+    img {
+        position: absolute;
+    }
+
+    h1 {
+        font-size: 80px;
+    }    
+
+    #wrap > .ta {
+        position: absolute;
+        top: 60%;
+        left: 35%;
+        display: block;
+        width: 30%;
+        height: auto;
+        opacity: 1;
+    }
+
+    #result_area {
+        position: absolute;
+        top: 220%;
+        left: 38%;
+        font-size: 50px;   
+        font-weight: 200;
+        font-family: 'Yeon Sung', cursive;
+    } 
+
+    #chances_area {
+        text-align: center;
+        font-size: 40px;
+        top : 50%;
+    }
+}
+ 
+
+
+    @media (min-width: 1260px) {
+        #wrap {
+            max-width: 1920px;
+        }
+        h1 {
+            font-size: 100px;
+        }
+
+    }
+    
+}
