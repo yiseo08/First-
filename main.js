@@ -62,20 +62,20 @@ function pickRandomNumber () {
 function play() {
     const USER_VALUE = userInput.value;
     if (USER_VALUE < 1 || USER_VALUE > 100) {
-        resultArea.textContent = '1부터 100 사이의 숫자를 입력 하시오.' ;
+        resultArea.textContent = 'UNDER 100' ;
         return;
     }
     if (userValueList.includes(USER_VALUE)) {
-        resultArea.textContent = '이미 입력한 숫자'
+        resultArea.textContent = 'Already Entered'
         return;
     }
     userValueList.push(USER_VALUE);
     if (USER_VALUE < computerNumber) {
-        resultArea.textContent = 'UP';
+        resultArea.textContent = 'GO UP';
     } else if (USER_VALUE > computerNumber) {
-        resultArea.textContent = 'DOWN';
+        resultArea.textContent = 'GO DOWN';
     } else {
-       resultArea.textContent = '정답';
+       resultArea.textContent = 'CORRECT!';
        gameOver = true;
     }
     /* 
@@ -105,7 +105,7 @@ function play() {
     http://developer.mozilla.org/ko/docs/web/API/Node 
     */
     chances--; /* 플레이 함수 실행될 때마다 하나씩 사라짐 */
-    chancesArea.innerHTML = `남은 기회 : ${chances}번`;
+    chancesArea.innerHTML = `CHANCES : ${chances}`;
     if (chances == 0) {
         gameOver = true;
     } 
@@ -119,11 +119,11 @@ function focusInput () {
 function reset () {
     pickRandomNumber();
     userInput.value = '';
-    resultArea.textContent = '결과가 나온다';
+    resultArea.textContent = 'RESULT';
     gameOver = false;
     playButton.disabled = false;
     chances = 7;
-    chancesArea.innerHTML = `남은 기회 : ${chances}번`;
+    chancesArea.innerHTML = `CHANCES : ${chances}`;
     userValueList = [];
 }
 pickRandomNumber ();
