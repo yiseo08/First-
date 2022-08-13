@@ -62,11 +62,11 @@ function pickRandomNumber () {
 function play() {
     const USER_VALUE = userInput.value;
     if (USER_VALUE < 1 || USER_VALUE > 100) {
-        resultArea.textContent = 'UNDER 100' ;
+        resultArea.textContent = 'Under 100' ;
         return;
     }
     if (userValueList.includes(USER_VALUE)) {
-        resultArea.textContent = 'Already Entered'
+        resultArea.textContent = 'Entered'
         return;
     }
     userValueList.push(USER_VALUE);
@@ -105,7 +105,7 @@ function play() {
     http://developer.mozilla.org/ko/docs/web/API/Node 
     */
     chances--; /* 플레이 함수 실행될 때마다 하나씩 사라짐 */
-    chancesArea.innerHTML = `CHANCES : ${chances}`;
+    chancesArea.innerHTML = `"CHANCES : ${chances}"`;
     if (chances == 0) {
         gameOver = true;
     } 
@@ -123,7 +123,7 @@ function reset () {
     gameOver = false;
     playButton.disabled = false;
     chances = 7;
-    chancesArea.innerHTML = `CHANCES : ${chances}`;
+    chancesArea.innerHTML = `"CHANCES : ${chances}"`;
     userValueList = [];
 }
 pickRandomNumber ();

@@ -1,39 +1,33 @@
 @charset "utf-8";
-/* body {
-    margin: 0;  기본적으로 들어간 마진값을 없앰 
-    height: 100vh;
-} */
+body {
+    position: relative;
+    margin: 0;   
+    background-color: pink;
+}
+
 #wrap {
     position: relative;
     width: 100%;
     min-width: 320px;
     max-width: 420px;
-    height: 100vh;
 }
-.BG {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: pink; 
-}
-.BG_2 {
+.border {
     position: absolute;
-    top: 0; 
-    left: 5%;
-    justify-content: center;
-    width: 88%;
-    height: 95vh;
+    width: 90%;
+    margin: 10px;
+    padding-bottom: 868px;
     border: 6px double indianred;
 }
+
 .game_utill {
     position: absolute;
     width: 100%;
-    height: auto;
-    top: 0%; 
-} 
+    top: 0%;
+}
 
 .game_utill h1 {
-    margin-top: 100px;
+    margin-top: 100px; 
+    left: 50px;
     font-family: 'Grandstander', cursive;
     font-size: 60px;
     text-align: center;
@@ -43,13 +37,11 @@
 #result_area {
     position: absolute;
     width: 250px;
-    height: auto;  
-    top: 330px;
-    left: 60px; 
-    padding: 90px 20px 90px 20px;
+    left: 13%;  
+    top: 250px;
+    padding: 80px 10px 80px 10px;
     font-family: 'Overpass', sans-serif;
-    font-size: 60px;
-    line-height: 55px;
+    font-size: 50px;
     color: darkred;
     text-align: center;
     border: 5px solid darkred ;
@@ -58,32 +50,43 @@
 
 #chances_area {
     position: absolute;
-    top: 150px;
-    left: 140px;
+    top: 540px;
+    left: 60px;
     text-align: center;
-    font-size: 28px;
-    font-family: 'Yeon Sung', cursive;
+    font-size: 40px;
+    font-family: 'Overpass', sans-serif;
     font-weight: 300;
+    color: darkred;
+    
 }
-
 #user_input,
 #play_button,
 #reset_button {
     position: absolute;
-    top: 200px;
-    opacity: 0.5;
-    border: 2px solid black;
-    font-family: 'Kirang Haerang', cursive;
-    font-weight: bold;
+    font-family: 'Grandstander', cursive;;
+    font-weight: 500;
+    text-align: center;
+    font-size: 40px;
+    color: darkred;
+    border: 3px solid darkred;
+    width: 130px;
+    background-color: rgba(255, 255, 255, 0);
 }
 #user_input {
-    left: 80px;
+    top: 640px;
+    left: 60px;
+    height: 130px;
 }
+
 #play_button {
-    right: 150px;
+    top: 640px;
+    left: 205px;
+    height: 65px;
 }
 #reset_button {
-    right: 105px;
+    top: 713px;
+    left: 205px;
+    height: 65px;
 }
 
 @media (min-width: 768px) {
@@ -100,10 +103,10 @@
     .game_utill h1 {
         position: absolute;
         width: 100%;
-        margin: 20px;
         text-align: center;
-        font-size: 80px;
-        text-align: center; }
+        font-size: 70px;
+        text-align: center;
+        border: 1px solid #111 }
         
     #result_area {
         position: absolute;
